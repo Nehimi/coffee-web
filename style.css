@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,700;1,600&display=swap');
+
+/* Reset box model and spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global type/color settings on body (safer than using the universal selector) */
+body {
+    color: #ccc;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /* colors */
+    --white-color: #fff;
+    --primary-color: #3b141c;
+    --secondary-color: #f3961c;
+    --light-pink-color: #faf4f5;
+    --medium-gray-color: #ccc;
+
+    /* font sizes */
+    --font-size-s: 0.9rem;
+    /*14px */
+    --font-size-m: 1.12rem;
+    /*18px*/
+    --font-size-l: 1.5rem;
+    /*24px*/
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+    /*14px*/
+    --font-size-normal: 1rem;
+    /* font weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    /* border radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+    /* size max-width */
+    --size-max-width: 1300px;
+}
+
+.navbar #menu-close-button,
+.navbar #menu-open-button {
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+}
+
+.nav-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1300px;
+}
+
+/* to show the text written in the close menu or header */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 101;
+    background-color: #3b141c;
+}
+
+header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+
+}
+
+.navbar .nav-logo .logo-text {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar .nav-menu .nav-link {
+    color: white;
+    border-radius: 30px;
+    padding: 10px 18px;
+    font-size: 16px;
+    transition: 0.3s ease;
+    font-weight: 500;
+
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color: white;
+    background: var(--secondary-color);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.hero-section {
+    min-height: 100vh;
+    background: #3b141c;
+}
+
+.hero-section .section-content {
+    display: flex;
+    align-items: center;
+    color: white;
+    min-height: 100vh;
+    justify-content: space-between;
+    /* Ensure it takes up the full height of the section */
+}
+
+.hero-section .hero-details .title {
+    font-size: var(--font-size-xxl);
+    margin-top: 10%;
+    color: var(--secondary-color);
+    font-family: "Miniver", sans-serif;
+    padding: 10px;
+}
+
+.hero-section .hero-details .hero-subtitle {
+    margin-top: 8px;
+    font-size: var(--font-size-xl);
+    max-width: 70%;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-xl);
+}
+
+.hero-section .hero-details .description {
+    font-size: var(--font-size-m);
+    margin: 24px 0 40px;
+    max-width: 70%;
+    padding-left: 10px;
+    /* Adjusted padding */
+}
+
+.hero-section .hero-details .buttons {
+    display: flex;
+    gap: 23px;
+}
+
+.hero-section .hero-details .button {
+    padding: 10px 50px;
+    border: 2px solid transparent;
+    color: var(--primary-color);
+    border-radius: var(--border-radius-m);
+    background: var(--secondary-color);
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-medium);
+    transition: 0.3s ease;
+}
+
+.hero-section .hero-image-wrapper {
+
+    max-width: 500px;
+    margin-right: 30px;
+}
+
+.hero-section .hero-details .button:hover,
+.hero-section .hero-details .contact-us {
+    color: var(--white-color);
+    border-color: var(--white-color);
+    background: transparent;
+}
+
+.hero-section .hero-details .contact-us:hover {
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+    background: var(--secondary-color);
+}
+
+@media screen and (max-width: 900px) {
+
+
+
+    :root {
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+
+    body.show-mobile-menu::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 99;
+        /* Overlay is behind the menu */
+    }
+
+    .navbar .nav-menu {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 70px 30px 30px;
+        background: var(--white-color);
+        transition: left 0.3s ease-in-out;
+        z-index: 100;
+        /* Menu itself has high z-index */
+        gap: 15px;
+    }
+
+    body.show-mobile-menu .nav-menu {
+        left: 0;
+    }
+
+    .navbar #menu-open-button {
+        display: block;
+        color: var(--white-color);
+        font-size: var(--font-size-l);
+    }
+
+    .navbar #menu-close-button {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: var(--font-size-xl);
+        color: var(--primary-color);
+    }
+
+    .navbar .nav-menu .nav-link {
+        color: var(--primary-color);
+        font-size: var(--font-size-l);
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navbar .nav-menu .nav-link:hover {
+        color: var(--white-color);
+    }
+
+    .hero-section .section-content {
+        gap: 50px;
+
+        padding: 30px 20px 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .hero-section .hero-details :is(.hero-subtitle, .description) {
+        max-width: 100%;
+    }
+
+    .hero-section .hero-details .buttons {
+        justify-content: center;
+    }
+
+    .hero-section .hero-image-wrapper {
+        max-width: 270px;
+        margin-right: 0;
+    }
+}
+
+/* =================================
+   Testimonials Page Styling
+   ================================= */
+.testmon-section {
+    background: var(--primary-color);
+    min-height: 100vh;
+    padding: 120px 20px 60px; /*top /left and right/ bottom */
+   
+}
+
+.testmon-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.testmon-header .title {
+    font-family: "Miniver", sans-serif;
+    font-size: 2.3rem;
+    color: orange;
+    margin-bottom: 15px;
+}
+
+.testmon-header .subtitle {
+    font-size: 30px;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.testmon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: var(--size-max-width);
+    margin: 0 auto;
+}
+.testmon-card{
+    background:#3b141c;
+    padding:30px;
+    border-radius: var(--border-radius-s);
+    display:flex;
+    flex-direction:column;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+     animation-delay: calc(0.2s * var(--i)); /* Staggered animation */
+}
+.testmon-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.testmon-card .card-header{ /* to align avatar and name horizontally */
+    display:flex;
+    gap:15px;
+     align-items:center;
+    margin-bottom: 20px;
+
+}
+.testmon-card .avatar{
+    width: 60px;
+    height: 60px;
+    border-radius: var(--border-radius-circle);
+    object-fit: cover;
+    border: 2px solid orange;
+
+}
+
+.testmon-card .reviewer-info .name{
+    color: white;
+    font-size:1.12rem;
+    font-weight:500;
+
+}
+.testmon-card .reviewer-info .title{
+color:var(--medium-gray-color);
+font-size: 0.9rem;
+
+}
+.testmon-card .review-text{
+    color:white;
+    font-style: italic;
+    line-height:1.7;
+    margin-bottom: 20px;
+    flex-grow: 1;/* Ensures cards have the same height */
+
+}
+.testmon-card .rating {
+    color: orange;
+    font-size: var(--font-size-normal);
+}

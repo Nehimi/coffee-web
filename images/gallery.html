@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | coffee</title>
+    <meta name="description" content="Explore our gallery of exquisite coffee creations, cozy cafe moments, and the art of coffee making. A visual journey into our coffee world.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar section-content">
+            <a href="index.html" class="nav-logo" aria-label="Go to homepage">
+                <h2 class="logo-text">☕️ coffee</h2>
+            </a>
+
+            <button id="menu-open-button" aria-label="Open mobile menu" aria-expanded="false" type="button">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu">
+                <li>
+                    <button id="menu-close-button" aria-label="Close mobile menu" aria-expanded="false" type="button">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </li>
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li> <!-- Assuming Contact is an anchor -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery-section">
+            <div class="section-content">
+                <div class="gallery-header">
+                    <h2 class="title">Our Coffee Moments</h2>
+                    <p class="subtitle">A glimpse into our world of craftsmanship, community, and caffeine.</p>
+                </div>
+                <div class="gallery-grid">
+                    <!-- Image 1: Couple enjoying coffee -->
+                    <div class="gallery-item" style="--i:1">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1888&auto=format&fit=crop" alt="Couple smiling and enjoying coffee at a cozy cafe table">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <!-- Image 2: Dynamic coffee splash -->
+                    <div class="gallery-item" style="--i:2">
+                        <img src="https://images.unsplash.com/photo-1416339990160-7c9c7b55f4b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1937&q=80" alt="Dramatic splash of coffee in a white cup">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <!-- Image 3: Assortment of iced coffee drinks -->
+                    <div class="gallery-item" style="--i:3">
+                        <img src="https://images.unsplash.com/photo-1559496417-046406f68d81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1936&q=80" alt="Three refreshing iced coffee drinks with different toppings">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <!-- Image 4: Steaming cup of coffee -->
+                    <div class="gallery-item" style="--i:4">
+                        <img src="https://images.unsplash.com/photo-1507111197137-651d66219957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" alt="A warm, steaming cup of coffee on a rustic wooden table">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <!-- Image 5: Croissant and coffee pairing -->
+                    <div class="gallery-item" style="--i:5">
+                        <img src="https://images.unsplash.com/photo-1511878484405-fe58424745f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="Flaky croissant served with a perfect cup of coffee">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <!-- Image 6: Exquisite latte art -->
+                    <div class="gallery-item" style="--i:6">
+                        <img src="https://images.unsplash.com/photo-1497935586351-b695d027137c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Close-up of intricate heart-shaped latte art in a coffee cup">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <!-- Image 7: Barista skillfully preparing coffee -->
+                    <div class="gallery-item" style="--i:7">
+                        <img src="https://images.unsplash.com/photo-1494786906975-b0eb9134731a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1937&q=80" alt="Barista focused on expertly tamping coffee grounds in a portafilter">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <!-- Image 8: Close-up of roasted coffee beans -->
+                    <div class="gallery-item" style="--i:8">
+                        <img src="https://images.unsplash.com/photo-1525088553748-01d674421611?q=80&w=1887&auto=format&fit=crop" alt="Rich texture and aroma of freshly roasted coffee beans">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <!-- Image 9: Interior of a modern coffee shop -->
+                    <div class="gallery-item" style="--i:9">
+                        <img src="https://images.unsplash.com/photo-1530366430343-f72535384594?q=80&w=1887&auto=format&fit=crop" alt="Bright and airy interior of a modern coffee shop with comfortable seating">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Structure -->
+        <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-img">
+            <span class="lightbox-close-button" aria-label="Close lightbox">&times;</span>
+            <img class="lightbox-content" id="lightbox-img" alt="Enlarged gallery image">
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
