@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>coffee shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- header/navbar --->
+  <header>
+    <nav class="navbar nav-content">
+      <a href="index.html" class="nav-logo">
+        <h2 class="logo-text">☕️Coffee</h2>
+      </a>
+      <button id="menu-open-button" aria-label="Open menu" aria-expanded="false" type="button">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu">
+        <li>
+          <button id="menu-close-button" aria-label="Close menu" aria-expanded="false" type="button">
+            <i class="fas fa-times"></i>
+          </button>
+        </li>
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="Testmon.html" class="nav-link">Testimonials</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <div class="section-content">
+        <div class="contact-wrapper">
+          <h2 class="title">Get in touch</h2>
+          <p class="subtitle">Send me a message and I'll get back to you as soon as I can.</p>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your name">
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" required placeholder="Subject">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
+
+            <div class="form-actions">
+              <button type="submit" class="button">Send Message</button>
+              <button type="reset" class="button secondary">Reset</button>
+            </div>
+
+            <p id="form-status" aria-live="polite" class="form-status" style="margin-top:12px"></p>
+          </form>
+        </div>
+        <div class="contact-info">
+          <h3>Prefer email?</h3>
+          <p>You can also email me directly at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+</body>
+
+</html>
