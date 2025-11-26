@@ -9,7 +9,7 @@ Coffee-web is a small static website project that showcases a coffee shop's page
 
 ## Project Structure
 
-- `Home.html` - Main landing page.
+- `index.html` - Main landing page (was `Home.html`).
 - `about.html` - About page with information about the shop.
 - `gallery.html` - Gallery page showing images.
 - `Testmon.html` - Testimonials page (note: filename spelled `Testmon.html`).
@@ -30,7 +30,7 @@ Using Python 3 (recommended):
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000/Home.html` in your browser (or `index.html` if you rename the entry file).
+Then open `http://localhost:8000/index.html` in your browser.
 
 ## How to Contribute
 
